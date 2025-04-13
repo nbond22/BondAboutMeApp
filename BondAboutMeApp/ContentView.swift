@@ -10,6 +10,8 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         ZStack{
+            Color(.systemPurple)
+                .ignoresSafeArea()
             
 //my picture and intro of me
             VStack{
@@ -20,14 +22,17 @@ struct ContentView: View {
                         .cornerRadius(30)
                     
                     
-                    Text("Info about me")
+                    Text("Hi! Take a look below to see me during KWK Spring 2025 CAB season and a picture of my dog!")
+                        .multilineTextAlignment(.center)
+                        .fontWeight(.bold)
                     
-                    Text("emoji")
+                    Text("👋🏾")
                 }
                 .padding()
                 .background(Rectangle()
                 .foregroundColor(Color(red: 255, green: 100, blue: 0)))
                 .cornerRadius(30)
+                .shadow(color: .white, radius:10)
                 .padding()
                 
 //pictures from Spring CAB weekends
@@ -41,15 +46,18 @@ struct ContentView: View {
                             .cornerRadius(30)
                         
                         
-                        Text("Info about SF")
+                        Text("This was my first time visiting San Francisco!")
+                            .multilineTextAlignment(.center)
+                            .fontWeight(.bold)
                         
-                        Text("emoji")
+                        Text("🌁")
                     }
                     .padding()
                     .background(Rectangle()
                     .foregroundColor(Color(red: 255, green: 100, blue: 0)))
                     .cornerRadius(30)
-                    .padding()
+                    .shadow(color: .white, radius:10)
+                    .padding(3.0)
                     
 //second CAB in STL
                     VStack{
@@ -59,15 +67,20 @@ struct ContentView: View {
                             .cornerRadius(30)
                         
                         
-                        Text("Info about STL")
+                        Text("This was also my first time visiting St. Louis!")
+                            .multilineTextAlignment(.center)
+                            .fontWeight(.bold)
                         
-                        Text("emoji")
+                        Image("STLArch")
+                            .resizable()
+                            .frame(width: 15.0, height: 25.0)
                     }
                     .padding()
                     .background(Rectangle()
                     .foregroundColor(Color(red: 255, green: 100, blue: 0)))
                     .cornerRadius(30)
-                    .padding()
+                    .shadow(color: .white, radius:10)
+                    .padding(3.0)
                 }
                 
 //info about Twix
@@ -77,10 +90,12 @@ struct ContentView: View {
                         .aspectRatio(contentMode: .fit)
                         .cornerRadius(30)
                     
-                    Text("Info about Twix")
+                    Text("This is Twix! She is 7-years old and a Terrier Mix!")
+                        .multilineTextAlignment(.center)
+                        .fontWeight(.bold)
                     
                     
-                    Text("emoji")
+                    Text("🐶")
                     
                 }
                 
@@ -88,6 +103,7 @@ struct ContentView: View {
                 .background(Rectangle()
                 .foregroundColor(Color(red: 255, green: 100, blue: 0)))
                 .cornerRadius(30)
+                .shadow(color: .white, radius:10)
                 .padding()
             }
         }
